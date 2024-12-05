@@ -1,0 +1,67 @@
+/*primero agregamos la clase*/
+.sidebar{
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column; /*divido tanto superior como inferior*/
+    justify-content: space-between; /*Justifica el contenido de la barra Lateral*/
+    background-color: #f0f5f9;
+    padding: 25px 15px; /*rellno*/
+}
+
+.sidebar img{
+    width: 20px; /*ancho de las imagenes*/
+}
+
+.sidebar .menu{
+    display: block;
+    margin-left: 10px;/*margen de bloque de visualizacion*/
+    cursor: pointer; /*puntero de cursor*/
+}
+
+.sidebar .new-chat{
+    margin-top: 10px;
+    display: inline-flex;/*Elementos de alineacion flexible*/
+    align-items: center; /*Espacio centrado*/
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+}
+
+.sidebar .recent{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .recent.title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.sidebar .recent-entry{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+}
+
+.sidebar .recent-entry:hover{
+    background-color: #e6eaf1;
+}
+
+.sidebar .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .bottom-item{
+    padding-right: 10px;
+    cursor: pointer;
+}
