@@ -13,9 +13,11 @@ import message_icon from './message_icon.png'
 import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
 import gemini_icon from './gemini_icon.png'
+import icon_user from './icon-user.png'
 
 export const assets = {
     history_icon,
+    icon_user,
     menu_icon,
     plus_icon,
     question_icon,
