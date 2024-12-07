@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: chatbot2024      # El nombre del servicio
-    runtime: node          # El entorno de ejecución (Node.js en este caso)
-    plan: free
-    buildCommand: npm install && npm run build
-    startCommand: npm run start
-    branch: main
