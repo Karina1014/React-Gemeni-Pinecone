@@ -78,6 +78,7 @@ const Main = () => {
                         <img onClick={handleSend} src={assets.send_icon} alt=""></img>
                     </div>
                 </div>
+               
                 <p className='bottom-info'>
                 Gémini puede mostrar información inexacta, incluso sobre personas, por lo que conviene comprobar sus respuestas.
                 </p>

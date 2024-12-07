@@ -29,20 +29,26 @@ import {
       },
     ];
   
+   
+  try {
     const chat = model.startChat({
       generationConfig,
       safetySettings,
       history: [],
     });
-  
-    try {
-      const result = await chat.sendMessage(prompt);
-      return result.response.text; // Devolver el texto directamente
-    } catch (error) {
-      console.error("Error:", error);
-      return "Error en la solicitud.";
+
+    const result = await chat.sendMessage(prompt);
+
+    if (!result || !result.response) {
+      throw new Error("La respuesta de la API está vacía o incompleta.");
     }
+
+    return result.response.text;
+  } catch (error) {
+    console.error("Error al procesar la solicitud:", error.message);
+    console.error("Detalles del error:", error); // Log para depuración avanzada
+    return "Ocurrió un error al procesar tu solicitud. Verifica el log para más detalles.";
   }
-  
+}
   export default runChat;
   
