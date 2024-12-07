@@ -1,13 +1,10 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 8080, // Puerto que Render espera
-  },
-  preview: {
-    port: 8080, // Configura el puerto para 'vite preview' también
-  },
-});
+    port: import.meta.env.VITE_PORT || 3000,  // Usamos la variable de entorno VITE_PORT
+    host: '0.0.0.0',  // Asegúrate de que la aplicación escuche en todas las interfaces de red
+  }
+})
