@@ -18,11 +18,11 @@ const ContextProvider = (props) => {
     setLoading(true); // Puedes mostrar un indicador de carga
     setShowResult(true);
     setRecentPrompt(input);
+    setPrevPrompts(prev=>[...prev,input])
     const response = await runChat(input);  // Asegúrate de que 'runChat' devuelve la respuesta correctamente
     setResultData(response);
     setLoading(false);
     setRecentPrompt(input);
-   
   };
 
   const contextValue = {
