@@ -16,15 +16,19 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
       <div className="top">
-        <img onClick={() => setExtended(prev => !prev)} className='menu' src={assets.menu_icon} alt="" />
+        <img onClick={() => setExtended(prev => !prev)} className='menu' src={assets.menu_icon_v2} alt="" />
+      {extended && (
+        <img src={assets.logo} alt="Chatbot" className="chat-icon" />
+      )}
         <div onClick={()=>newChat()} className="new-chat">
-          <img src={assets.plus_icon} alt="" />
+          <img src={assets.plus_v2} alt="" />
           {extended ? <p>Nuevo chat</p> : null}
         </div>
 
         {extended ?  
+        
           <div className="recent">
-            <p className="recent-title">Recent</p>
+            <p className="recent-title">Recientes</p>
             {prevPrompts.map((item, index) => (
               <div key={index} onClick={()=>loadPrompt(item)} className="recent-entry">
                 <img src={assets.message_icon} alt="Message Icon" />
@@ -34,22 +38,29 @@ const Sidebar = () => {
           </div>
         : null}
       </div>
-
-      <div className="bottom">
+        <div className="bottom">
         <div className="bottom-item recent-entry">
-          <img src={assets.question_icon} alt="" />
-          {extended ? <p>Ayuda</p> : null}
-        </div>
-        <div className="bottom-item recent-entry">
-          <img src={assets.history_icon} alt="" />
-          {extended ? <p>Actividad</p> : null}
-        </div>
-        <div className="bottom-item recent-entry">
-          <img src={assets.setting_icon} alt="" />
-          {extended ? <p>Configuraciones</p> : null}
-        </div>
-      </div>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src={assets.facebook_icon} alt="Facebook" />
+      </a>
+      {extended ? <p>Facebook</p> : null}
     </div>
+    <div className="bottom-item recent-entry">
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <img src={assets.instagram_icon} alt="Instagram" />
+      </a>
+      {extended ? <p>Instagram</p> : null}
+    </div>
+    <div className="bottom-item recent-entry">
+      <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+        <img src={assets.tiktok_icon} alt="TikTok" />
+      </a>
+      {extended ? <p>Tik tok</p> : null}
+    </div>
+  </div>
+  </div>
+
+     
   );
 }
 

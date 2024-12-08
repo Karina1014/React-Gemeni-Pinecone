@@ -3,6 +3,7 @@
     min-height: 100vh;
     padding-bottom: 15vh;/*relleno inferio*/
     position: relative;/*posición*/
+    
 }
 
 /*Navegación*/
@@ -25,6 +26,13 @@
 .main-container{
     max-width: 900px;
     margin: auto;
+    background-image: linear-gradient(to right, #FFA500, #0791BE);
+    background-origin: border-box;
+    background-clip: content-box;
+    position:static ;
+    border-radius: 15px;
+    border: 5px solid transparent;
+    margin-top: 20px;
  }
 
  .main .greet{
